@@ -26,3 +26,17 @@ INNER JOIN Ordenes o
     ON c.Id_Cliente = o.Id_Cliente
 GROUP BY Nombre_Completo
 ORDER BY Total_Gastado DESC;
+
+ Example Query
+ 
+The following query calculates the total number of orders and total spending per client by joining the clientes and ordenes tables.
+ sql
+ SELECT 
+    CONCAT(c.Nombre_Cliente, ' ', c.ApellidoP_Cliente, ' ', c.ApellidoM_Cliente) AS Nombre_Completo,
+    COUNT(o.Id_Orden) AS Total_Ordenes,
+    SUM(o.Cantidad_Producto * o.Precio_Producto) AS Total_Gastado
+ FROM Clientes c
+ INNER JOIN Ordenes o 
+    ON c.Id_Cliente = o.Id_Cliente
+ GROUP BY Nombre_Completo
+ ORDER BY Total_Gastado DESC;
