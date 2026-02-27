@@ -1,23 +1,28 @@
- sql-relational-database-project
- Relational database design and multi-table SQL queries demonstrating joins, aggregations, and data integrity.
+# SQL Relational Database & Reporting Project (Hitech System)
 
- SQL Relational Database Project (Hitech System)
+Relational database design and multi-table SQL queries demonstrating JOIN operations, aggregations, and data integrity using MySQL.
 
- Overview
+## Overview
 
- This project demonstrates the design and implementation of a relational database using MySQL. The system models clients and their purchase orders, allowing structured         reporting through multi-table queries.
+This project demonstrates the design and implementation of a relational database using MySQL.  
+The system models clients and their purchase orders, enabling structured reporting through multi-table queries.
 
- Database Structure
+The objective of this project was to apply relational database principles and generate analytical reports using SQL.
 
- clientes table storing client information
- ordenes table storing transactional order data
- Primary and foreign key relationships
- InnoDB storage engine
+## Database Structure
 
- Example Query
+- `Clientes` table storing client information  
+- `Ordenes` table storing transactional order data  
+- Primary and foreign key relationships  
+- InnoDB storage engine for referential integrity  
 
- sql
- SELECT 
+
+## Example Analytical Query
+
+The following query calculates the total number of orders and total spending per client by joining the `Clientes` and `Ordenes` tables:
+
+```sql
+SELECT 
     CONCAT(c.Nombre_Cliente, ' ', c.ApellidoP_Cliente, ' ', c.ApellidoM_Cliente) AS Nombre_Completo,
     COUNT(o.Id_Orden) AS Total_Ordenes,
     SUM(o.Cantidad_Producto * o.Precio_Producto) AS Total_Gastado
@@ -26,17 +31,3 @@ INNER JOIN Ordenes o
     ON c.Id_Cliente = o.Id_Cliente
 GROUP BY Nombre_Completo
 ORDER BY Total_Gastado DESC;
-
- Example Query
- 
-The following query calculates the total number of orders and total spending per client by joining the clientes and ordenes tables.
- sql
- SELECT 
-    CONCAT(c.Nombre_Cliente, ' ', c.ApellidoP_Cliente, ' ', c.ApellidoM_Cliente) AS Nombre_Completo,
-    COUNT(o.Id_Orden) AS Total_Ordenes,
-    SUM(o.Cantidad_Producto * o.Precio_Producto) AS Total_Gastado
- FROM Clientes c
- INNER JOIN Ordenes o 
-    ON c.Id_Cliente = o.Id_Cliente
- GROUP BY Nombre_Completo
- ORDER BY Total_Gastado DESC;
