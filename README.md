@@ -2,14 +2,14 @@
 
 Relational database design and multi-table SQL queries demonstrating JOIN operations, aggregations, and data integrity using MySQL.
 
-## Overview
+# Overview
 
 This project demonstrates the design and implementation of a relational database using MySQL.  
 The system models clients and their purchase orders, enabling structured reporting through multi-table queries.
 
 The objective of this project was to apply relational database principles and generate analytical reports using SQL.
 
-## Database Structure
+# Database Structure
 
 - `Clientes` table storing client information  
 - `Ordenes` table storing transactional order data  
@@ -17,7 +17,7 @@ The objective of this project was to apply relational database principles and ge
 - InnoDB storage engine for referential integrity  
 
 
-## Example Analytical Query
+# Example Analytical Query
 
 The following query calculates the total number of orders and total spending per client by joining the `Clientes` and `Ordenes` tables:
 
