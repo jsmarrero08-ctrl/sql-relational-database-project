@@ -1,33 +1,33 @@
-# SQL Relational Database & Reporting Project (Hitech System)
+# SQL Relational Database & Reporting Project
 
-Relational database design and multi-table SQL queries demonstrating JOIN operations, aggregations, and data integrity using MySQL.
+This project focuses on building a relational database and using SQL queries to organize and analyze data.
 
-# Overview
+---
 
-This project demonstrates the design and implementation of a relational database using MySQL.  
-The system models clients and their purchase orders, enabling structured reporting through multi-table queries.
+## About this project
 
-The objective of this project was to apply relational database principles and generate analytical reports using SQL.
+I created a database to store client and transaction data and used SQL to generate reports. The goal was to organize the data properly and make it easier to analyze using queries.
 
-# Database Structure
+---
 
-- `Clientes` table storing client information  
-- `Ordenes` table storing transactional order data  
-- Primary and foreign key relationships  
-- InnoDB storage engine for referential integrity  
+## What I did
 
+- Designed tables with primary and foreign keys  
+- Created relationships between tables  
+- Wrote queries using JOIN to combine data  
+- Used GROUP BY, SUM, and COUNT to generate reports  
 
-# Example Analytical Query
+---
 
-The following query calculates the total number of orders and total spending per client by joining the `Clientes` and `Ordenes` tables:
+## What this shows
 
-```sql
-SELECT 
-    CONCAT(c.Nombre_Cliente, ' ', c.ApellidoP_Cliente, ' ', c.ApellidoM_Cliente) AS Nombre_Completo,
-    COUNT(o.Id_Orden) AS Total_Ordenes,
-    SUM(o.Cantidad_Producto * o.Precio_Producto) AS Total_Gastado
-FROM Clientes c
-INNER JOIN Ordenes o 
-    ON c.Id_Cliente = o.Id_Cliente
-GROUP BY Nombre_Completo
-ORDER BY Total_Gastado DESC;
+- Ability to work with relational databases  
+- Understanding of how tables connect  
+- Experience writing SQL queries for analysis  
+
+---
+
+## Tools used
+
+- MySQL  
+- SQL  
