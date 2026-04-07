@@ -1,47 +1,45 @@
 # SQL Relational Database & Reporting Project
 
-This project focuses on building a relational database and using SQL queries to organize and analyze data.
+This project shows a relational database built to store client and transaction data, along with SQL queries used to organize and summarize the information.
 
 ---
 
-## About this project
+## Overview
 
-I created a database to store client and transaction data and used SQL to work with the data. The goal was to organize everything properly and make it easier to analyze using queries.
-
----
-
-## What I did
-
-- Designed tables with primary and foreign keys  
-- Created relationships between tables  
-- Wrote queries using JOIN to combine data  
-- Used GROUP BY, SUM, and COUNT to generate reports  
+I created the database structure, connected the tables, and wrote queries to review the data. The goal was to keep the data organized and use SQL to generate simple reports.
 
 ---
 
-## Additional Queries
+## Database Design and Queries
 
-I also created a separate file with SQL queries to explore the data and generate basic reports.
-
-These queries include:
-- Joining clients with their orders  
-- Counting total orders per client  
-- Calculating total spending  
-- Filtering data by date  
-
-See `queries.sql` for more details.
+- Created tables with primary and foreign keys
+- Connected the tables through relationships
+- Wrote JOIN queries to combine data
+- Used GROUP BY, SUM, and COUNT for reporting
 
 ---
 
-## What this project shows
+## Extra Query File
 
-- Ability to work with relational databases  
-- Understanding of how tables connect  
-- Experience writing SQL queries for analysis  
+I also added a separate `queries.sql` file with extra queries for reporting and data review.
+
+It includes queries for:
+- Joining clients with their orders
+- Counting total orders per client
+- Calculating total spending
+- Filtering records by date
 
 ---
 
-## Tools used
+## What This Project Shows
 
-- MySQL  
-- SQL  
+- Understanding of relational database structure
+- Ability to work with connected tables
+- Experience using SQL for reporting and analysis
+
+---
+
+## Tools
+
+- MySQL
+- SQL
